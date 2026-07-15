@@ -3750,7 +3750,7 @@ p {
 
 .nav-menu {
   z-index: 2;
-  grid-column-gap: 16px;
+  grid-column-gap: 30px;
   grid-row-gap: 16px;
   -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
@@ -3766,6 +3766,7 @@ p {
   padding-top: 0;
   padding-bottom: 0;
   display: flex;
+  white-space: nowrap
 }
 
 .cart-quantity-wrap {
@@ -3984,8 +3985,8 @@ p {
 }
 
 .header-item-left {
-  grid-column-gap: 72px;
-  grid-row-gap: 72px;
+  grid-column-gap: 50px;
+  grid-row-gap: 50px;
   background-color: var(--_colors---white);
   border-bottom-right-radius: 24px;
   justify-content: flex-start;
@@ -5046,7 +5047,7 @@ p {
 }
 
 .footer-item {
-  background-image: url("../692c14a730d14f77be824171_94d774d4957270d1df48f47561f8b714_footer-bg.avif");
+  background-color: #000000;
   background-position: 50%;
   background-size: cover;
   border-radius: 16px;
@@ -5316,11 +5317,11 @@ p {
 
 .page-title-center {
   grid-column-gap: 24px;
-  grid-row-gap: 24px;
+  grid-row-gap: 70px;
   flex-flow: column;
   justify-content: center;
   align-items: flex-start;
-  width: 100%;
+  width: 125%;
   display: flex;
 }
 
@@ -9838,4 +9839,20 @@ p {
 
 #w-node-_6ed3d99b-c486-ed90-ccde-00c8d0fa0cd1-339cb25b {
   place-self: center;
+}
+.about-banner-shap-wrap {
+  position: relative;
+  width: 100%;
+  height: 500px; /* ارتفاع دلخواه خود را تنظیم کنید */
+  overflow: hidden;
+  background-color: #f0f0f0; /* رنگ زمینه در حین بارگذاری */
+}
+
+.about-banner-shap-wrap iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
 }

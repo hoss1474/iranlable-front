@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link rel="stylesheet" href="asset/css/footer.css" />
+</head>
+<body>
+
+
+
+  <!-- ==========================================
+       FOOTER - SPECIAL EDITION
+       ========================================== -->
+  <footer class="footer-special">
+
+    <!-- Wave Divider -->
+    <div class="wave-divider">
+      <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
+        <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" />
+      </svg>
+    </div>
+
+    <div class="footer-special-wrap">
+
+      <!-- ===== TOP ROW ===== -->
+      <div class="footer-top">
+
+        <!-- Brand -->
+        <div class="footer-brand">
+         
+          <div class="brand-name">
+    <a href="index.html">
+        <img
+            src="asset/img/logo.PNG"
+            alt="Logo"
+            class="footer-logo"
+            loading="lazy"
+        >
+    </a>
+</div>
+          <div class="brand-tagline">طراحی برای فردا</div>
+          <div class="brand-socials">
+            <a href="#" class="social-link">in</a>
+            <a href="#" class="social-link">ig</a>
+            <a href="#" class="social-link">tw</a>
+            <a href="#" class="social-link">yt</a>
+          </div>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="footer-links-group">
+          <div class="links-column">
+            <h4>کشف</h4>
+            <a href="#">محصولات</a>
+            <a href="#">ویژگی‌ها</a>
+            <a href="#">تازه‌ها</a>
+          </div>
+          <div class="links-column">
+            <h4>شرکت</h4>
+            <a href="about.html">درباره</a>
+            <a href="shop.html">فروشگاه</a>
+            <a href="contact.html">تماس</a>
+          </div>
+          <div class="links-column">
+            <h4>پشتیبانی</h4>
+            <a href="faq.html">راهنما</a>
+            <a href="blog.html">بلاگ</a>
+            <a href="#">قوانین</a>
+          </div>
+        </div>
+
+        <!-- Newsletter -->
+        <div class="footer-newsletter">
+          <h4>خبرنامه</h4>
+          <p>اولین نفری باش که از تخفیف‌ها مطلع میشی</p>
+          <form class="newsletter-form">
+            <input type="email" placeholder="ایمیل تو..." />
+            <button type="submit">➜</button>
+          </form>
+        </div>
+
+      </div>
+
+      <!-- ===== BOTTOM ROW ===== -->
+      <div class="footer-bottom">
+        <div class="footer-payments">
+          <!-- <span class="pay-badge">💳</span>
+          <span class="pay-badge">🪪</span>
+          <span class="pay-badge">🔒</span>
+          <span class="pay-badge">⚡</span> -->
+        </div>
+        <p class="footer-copy">
+          © ۲۰۲۶ تمامی حقوق این وب‌سایت متعلق به Mazorya Group است.
+        
+        </p>
+        <div class="footer-backtop">
+          <button class="backtop-btn" onclick="window.scrollTo({top:0,behavior:'smooth'})">
+            ↑
+          </button>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Decorative Orbs -->
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
+    <div class="orb orb-3"></div>
+
+  </footer>
+
+  <script>
+    // نمایش پیام فرم
+    document.querySelector('.newsletter-form')?.addEventListener('submit', function(e) {
+      e.preventDefault();
+      alert('🎉 با موفقیت عضو شدی!');
+      this.querySelector('input').value = '';
+    });
+  </script>
+
+</body>
+</html>
