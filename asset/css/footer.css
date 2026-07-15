@@ -2,8 +2,19 @@
    RESET & BASE
    ============================================ */
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+  
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
 
 .dummy-content {
   flex: 1;
@@ -26,6 +37,7 @@
   padding: 0 0 30px;
   overflow: hidden;
   border-top: none;
+  margin-top: auto;
 }
 
 /* ---- Wave Divider ---- */
@@ -126,7 +138,7 @@
   grid-template-columns: 1.2fr 1.8fr 1.2fr;
   gap: 50px;
   padding: 40px 0 50px;
-  border-bottom: 1px solid rgb(255, 255, 255);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 /* ---- Brand ---- */
@@ -152,7 +164,7 @@
 .brand-name {
   font-size: 28px;
   font-weight: 800;
-     background: linear-gradient(135deg, #1d4e79, #5ad3da);
+  background: linear-gradient(135deg, #1d4e79, #5ad3da);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -170,6 +182,7 @@
   display: flex;
   gap: 12px;
   margin-top: 6px;
+  flex-wrap: wrap;
 }
 
 .social-link {
@@ -233,7 +246,7 @@
 }
 
 .links-column a {
-  color: rgb(255, 255, 255);
+  color: rgba(255, 255, 255, 0.6);
   text-decoration: none;
   font-size: 14px;
   font-weight: 400;
@@ -290,7 +303,7 @@
 
 .footer-newsletter p {
   font-size: 14px;
-  color: rgb(255, 255, 255);
+  color: rgba(255, 255, 255, 0.5);
   font-weight: 300;
   line-height: 1.6;
 }
@@ -368,6 +381,7 @@
 .footer-payments {
   display: flex;
   gap: 16px;
+  flex-wrap: wrap;
 }
 
 .pay-badge {
@@ -384,7 +398,7 @@
 
 .footer-copy {
   font-size: 13px;
-  color: rgb(255, 255, 255);
+  color: rgba(255, 255, 255, 0.4);
   font-weight: 300;
   letter-spacing: 0.5px;
 }
@@ -405,7 +419,7 @@
   height: 44px;
   border-radius: 50%;
   border: 1px solid rgba(255, 255, 255, 0.06);
-      background: linear-gradient(135deg, #1d4e79, #5ad3da);
+  background: linear-gradient(135deg, #1d4e79, #5ad3da);
   color: rgb(255, 255, 255);
   font-size: 20px;
   cursor: pointer;
@@ -423,22 +437,26 @@
 }
 
 /* ============================================
-   RESPONSIVE
+   RESPONSIVE - نسخه موبایل بهینه‌شده
    ============================================ */
 
+/* تبلت و صفحه‌های کوچکتر */
 @media (max-width: 992px) {
   .footer-top {
     grid-template-columns: 1fr 1fr;
     gap: 40px;
   }
+  
   .footer-newsletter {
     grid-column: 1 / -1;
   }
+  
   .footer-links-group {
     grid-column: 1 / -1;
   }
 }
 
+/* موبایل - حالت اصلی */
 @media (max-width: 768px) {
   .footer-top {
     grid-template-columns: 1fr;
@@ -453,7 +471,8 @@
 
   .footer-bottom {
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
+    text-align: center;
     gap: 14px;
     padding-top: 20px;
   }
@@ -469,6 +488,10 @@
   .brand-name {
     font-size: 24px;
   }
+  
+  .brand-tagline {
+    font-size: 13px;
+  }
 
   .wave-divider {
     height: 50px;
@@ -482,8 +505,65 @@
   .footer-special-wrap {
     padding: 0 20px;
   }
+  
+  /* تنظیمات فوتر در موبایل */
+  .footer-brand {
+    align-items: center;
+    text-align: center;
+  }
+  
+  .brand-socials {
+    justify-content: center;
+  }
+  
+  .links-column {
+    align-items: center;
+    text-align: center;
+  }
+  
+  .links-column a {
+    width: auto;
+  }
+  
+  .links-column a::before {
+    display: none;
+  }
+  
+  .links-column a:hover {
+    transform: translateX(0);
+  }
+  
+  .links-column h4::after {
+    right: 50%;
+    transform: translateX(50%);
+  }
+  
+  .footer-newsletter {
+    align-items: center;
+    text-align: center;
+  }
+  
+  .footer-newsletter h4::after {
+    right: 50%;
+    transform: translateX(50%);
+  }
+  
+  .newsletter-form {
+    width: 100%;
+    max-width: 400px;
+  }
+  
+  .newsletter-form input {
+    font-size: 16px; /* جلوگیری از زوم در iOS */
+    padding: 14px 18px;
+  }
+  
+  .footer-payments {
+    justify-content: center;
+  }
 }
 
+/* موبایل‌های بسیار کوچک */
 @media (max-width: 480px) {
   .footer-links-group {
     grid-template-columns: 1fr;
@@ -497,6 +577,115 @@
 
   .brand-icon {
     font-size: 28px;
+  }
+  
+  .brand-name {
+    font-size: 20px;
+  }
+  
+  .social-link {
+    width: 34px;
+    height: 34px;
+    font-size: 10px;
+  }
+  
+  .footer-special-wrap {
+    padding: 0 15px;
+  }
+  
+  .footer-bottom {
+    gap: 12px;
+    padding-top: 16px;
+  }
+  
+  .footer-copy {
+    font-size: 11px;
+  }
+  
+  .pay-badge {
+    font-size: 18px;
+  }
+  
+  .backtop-btn {
+    width: 38px;
+    height: 38px;
+    font-size: 16px;
+  }
+  
+  .newsletter-form button {
+    width: 38px;
+    height: 38px;
+    font-size: 16px;
+  }
+  
+  .newsletter-form input {
+    padding: 12px 14px;
+    font-size: 14px;
+  }
+  
+  .wave-divider {
+    height: 35px;
+    margin-bottom: -18px;
+  }
+}
+
+/* موبایل‌های خیلی کوچک (زیر 360px) */
+@media (max-width: 360px) {
+  .footer-special-wrap {
+    padding: 0 10px;
+  }
+  
+  .brand-name {
+    font-size: 18px;
+  }
+  
+  .footer-top {
+    gap: 22px;
+    padding: 16px 0 22px;
+  }
+  
+  .links-column h4 {
+    font-size: 10px;
+    letter-spacing: 1.5px;
+  }
+  
+  .links-column a {
+    font-size: 12px;
+  }
+  
+  .footer-newsletter p {
+    font-size: 12px;
+  }
+  
+  .newsletter-form {
+    border-radius: 30px;
+  }
+  
+  .newsletter-form input {
+    padding: 10px 12px;
+    font-size: 13px;
+  }
+  
+  .newsletter-form button {
+    width: 34px;
+    height: 34px;
+    font-size: 14px;
+  }
+  
+  .social-link {
+    width: 30px;
+    height: 30px;
+    font-size: 9px;
+  }
+  
+  .pay-badge {
+    font-size: 16px;
+  }
+  
+  .backtop-btn {
+    width: 34px;
+    height: 34px;
+    font-size: 14px;
   }
 }
 
@@ -513,4 +702,11 @@
 ::selection {
   background: rgba(99, 102, 241, 0.3);
   color: #ffffff;
+}
+
+/* جلوگیری از اسکرول افقی در موبایل */
+@media (max-width: 768px) {
+  .footer-special {
+    overflow-x: hidden;
+  }
 }
