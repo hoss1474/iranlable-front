@@ -46,12 +46,14 @@
   </head>
   <body>
     <div class="page-wrapper">
+
       <header id="header"></header>
       <script>
         fetch("/header.html")
           .then((res) => res.text())
           .then((data) => (document.getElementById("header").innerHTML = data));
       </script>
+
       <section class="page-title">
         <div class="w-layout-blockcontainer container w-container">
           <div class="page-title-row _02">
